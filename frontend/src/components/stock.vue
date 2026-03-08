@@ -1105,19 +1105,13 @@ function showFsChart(code, name) {
 }
 
 function showFenshi(code, name, changePercent) {
-  data.code = code
-  data.name = name
-  data.changePercent = changePercent
-  data.fenshiURL = 'http://image.sinajs.cn/newchart/min/n/' + data.code + '.gif' + "?t=" + Date.now()
-
-  if (code.startsWith('hk')) {
-    data.fenshiURL = 'http://image.sinajs.cn/newchart/hk_stock/min/' + data.code.replace("hk", "") + '.gif' + "?t=" + Date.now()
-  }
-  if (code.startsWith('gb_')) {
-    data.fenshiURL = 'http://image.sinajs.cn/newchart/usstock/min/' + data.code.replace("gb_", "") + '.gif' + "?t=" + Date.now()
-  }
-
-  modalShow2.value = true
+  router.push({
+    name: 'stockDetail',
+    query: {
+      code: code,
+      name: name,
+    }
+  });
 }
 
 function handleFeishi() {
@@ -1476,18 +1470,13 @@ function showMoney(code, name) {
 }
 
 function showK(code, name) {
-  data.code = code
-  data.name = name
-  data.kURL = 'http://image.sinajs.cn/newchart/daily/n/' + data.code + '.gif' + "?t=" + Date.now()
-  if (code.startsWith('hk')) {
-    data.kURL = 'http://image.sinajs.cn/newchart/hk_stock/daily/' + data.code.replace("hk", "") + '.gif' + "?t=" + Date.now()
-  }
-  if (code.startsWith('gb_')) {
-    data.kURL = 'http://image.sinajs.cn/newchart/usstock/daily/' + data.code.replace("gb_", "") + '.gif' + "?t=" + Date.now()
-  }
-  modalShow3.value = true
-  //https://image.sinajs.cn/newchart/usstock/daily/dji.gif
-  //https://image.sinajs.cn/newchart/hk_stock/daily/06030.gif?1740729404273
+  router.push({
+    name: 'stockDetail',
+    query: {
+      code: code,
+      name: name,
+    }
+  });
 }
 
 
