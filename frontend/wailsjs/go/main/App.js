@@ -194,6 +194,10 @@ export function GetStockKLine(arg1, arg2, arg3) {
   return window['go']['main']['App']['GetStockKLine'](arg1, arg2, arg3);
 }
 
+export function GetStockKLineWithPeriod(arg1, arg2, arg3, arg4) {
+  return window['go']['main']['App']['GetStockKLineWithPeriod'](arg1, arg2, arg3, arg4);
+}
+
 export function GetStockList(arg1) {
   return window['go']['main']['App']['GetStockList'](arg1);
 }

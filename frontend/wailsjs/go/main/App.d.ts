@@ -100,6 +100,8 @@ export function GetStockCommonKLine(arg1:string,arg2:string,arg3:number):Promise
 
 export function GetStockKLine(arg1:string,arg2:string,arg3:number):Promise<any>;
 
+export function GetStockKLineWithPeriod(arg1:string,arg2:string,arg3:number,arg4:string):Promise<any>;
+
 export function GetStockList(arg1:string):Promise<Array<data.StockBasic>>;
 
 export function GetStockMinutePriceLineData(arg1:string,arg2:string):Promise<Record<string, any>>;

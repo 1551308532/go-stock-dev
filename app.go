@@ -1990,6 +1990,10 @@ func (a *App) GetStockKLine(stockCode, stockName string, days int64) *[]data.KLi
 	return data.NewStockDataApi().GetHK_KLineData(stockCode, "day", days)
 }
 
+func (a *App) GetStockKLineWithPeriod(stockCode, stockName string, days int64, period string) *[]data.KLineData {
+	return data.NewStockDataApi().GetHK_KLineData(stockCode, period, days)
+}
+
 func (a *App) GetStockMinutePriceLineData(stockCode, stockName string) map[string]any {
 	res := make(map[string]any, 4)
 	priceData, date := data.NewStockDataApi().GetStockMinutePriceData(stockCode)
